@@ -26,11 +26,127 @@
             <div id="background2">
               <div id="anext-generation"></div>
               <div id="introducing">
+              <div class="container">
+            
+        <!--Blog Post 1-->
+        <div class="container1">
+            <h2>5 Computer System Components</h2>
+            <div class="flex1">
+                <p>
+               <h2>The following points highlight the five main components of a computer.
+                <br> The components are:</h2>     
+                <h3><strong>Input Unit:<br>This unit transfers the information from outside
+                to the memory or storage unit by any of the following functions:</strong></h3>
+                <ul>
+                    <li>It accepts (or reads) the list of instructions and data from the outside world;</li>
+                    <li> It converts these instructions and data in computer acceptable format;</li>
+                    <li>It supplies the converted instructions and data to the computer system for further processing.</li>
+                </ul>
+                    <h3><strong>Output Unit:<br>The job of an output unit is just the reverse of that of
+                    an input unit. It supplied information and results of computation to the outside world.
+                    Thus it links the computer with the external environment. As computers work with binary code, 
+                    the results produced are also in the binary form. Hence, before supplying the results to the outside world,
+                    it must be converted to human acceptable (readable) form. This task is accomplished by units called output interfaces.</strong></h3>
+                    <ul>
+                    <li>It accepts the results produced by the computer which are in coded form and hence cannot be easily understood by us;</li>
+                    <li>It converts these coded results to human acceptable (readable) form;</li>
+                    <li>It supplied the converted results to the outside world.</li>
+                    <img src="images/input.png" alt="input" width="360" height="240">     
+            </ul>
+            </div>
+            <div class="flex2">
+                <h3><strong>Memory or Storage Unit:<br>
+                Memory unit is the amount of data that can be stored in the storage unit.<br>
+                The specific functions of the storage unit are to store:</strong></h3>
+                <ul>
+                    <li>All the data to be processed and the instruction required for processing (received from input devices);</li>
+                    <li>Intermediate results of processing;</li>
+                    <li>Final results of processing before these results are released to an output device.</li>
+                    <img src="images/storage.jpg" alt="storage" width="360" height="240">        
+                </ul>
+            </div>
+
+            <div class="flex3">
+                <h3><strong>Central Processing Unit (CPU): <br>
+                    The main unit inside the computer is the CPU.This unit is also called programme controller and is the most complex unit. It is the nerve centre
+                    because each unit of the computer works under the supervision of this unit.</strong></h3>
+                <ul>
+                    <li>It controls all internal and external devices, performs “Arithmetic and Logical operations”. </li>
+                    <li>The operations a Microprocessor performs are called “instruction set” of this processor.</li>
+                    <li>The instruction set is “hard wired” in the CPU and determines the machine language for the CPU.</li>
+                    <li>The more complicated the instruction set is, the slower the CPU works. Processors differed from one another by the instruction set.</li>
+                    <img src="images/cpu.jfif" alt="storage" width="360" height="240">
+                </ul>
+            </div>
+
+            <div class="flex4">
+                <h3><strong>Arithmetic and Logic Unit (ALU)<br>
+                    The arithmetic and logic unit (ALU) of a computer system is the place where the actual execution
+                    of the instructions take place during the processing operations.
+                    All calculations are performed and all comparisons (decisions) are made in the ALU.:</strong></h3>
+                <ul>
+                    <li>The arithmetic and logic unit (ALU) is the part where actual computations take place.
+                         It consists of circuits that perform arithmetic operations
+                         (e.g. addition, subtraction, multiplication, division over data received from memory
+                          and capable to compare numbers (less than, equal to, or greater than).</li>
+                    <li>While performing these operations the ALU takes data from the temporary
+                        storage are inside the CPU named registers. </li>
+                    <li>Some of the registers are general purpose and some are reserved for certain functions.
+                         It is a high-speed memory which holds only data from immediate processing and results of this processing.</li>
+                    <li>If these results are not needed for the next instruction, they are sent back to the main memory and registers
+                         are occupied by the new data used in the next instruction. </li>
+                         <img src="images/alu.png" alt="storage" width="360" height="240">  
+                </ul>
+            </div>
+            <div class="flex5">
+                <h3><strong>Output Unit:</strong></h3>
+                <ul>
+                    <li>Stands for <i>Arithmetic and Logic Unit</i></li>
+                    <li>The place where instructions are executed during processing operations</li>
+                    <li>All calculations an decisions are made in the ALU</li>
+                   
+
+                </ul>
                 <h2>Text</h2>
                 <h5><a href="#">Link »</a></h5>
               </div>
             </div>
           </div>
-    </section>    
+          <h2><strong></strong>How the Internet Works</strong></h2>
+                        <p>
+                <br>
+                The Internet is a huge collection of wide area networks and computers that are connected to each other.
+                These networks allow data to be transferred and shared between the computers and devices connected to
+                them.
+                <br>
+                The devices that we use to connect to the internet (our phones, laptops) connect to websites that are
+                run
+                through servers. For example, Google has its own computer and servers that house all of the information
+                that
+                we access when we google something.
+                <br>
+                Whenever we search for something on the internet, the information is requested as a "packet" and it
+                travels
+                through the Internet Service Provider (such as Comcast) to a server (like Google) through routers which
+                tell
+                the packet where to go. Then the packet travels back to your device with the information you requested.
+                <br>
+                <img src="https://mocomi.com/wp-content/uploads/2016/10/MOC_GIFO_INTERNET.gif" alt="internet diagram"
+                    width="480" height="360">
+            </p>
+        </div>
+    </section> 
+    <script>
+        function myFunction() {
+            var txt;
+            var person = prompt("Please enter your name:", "Harry Potter");
+            if (person == null || person == "") {
+                txt = "User cancelled the prompt.";
+            } else {
+                txt = "Hello " + person + "! How are you today?";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>   
 </body>
 </html>
