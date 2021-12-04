@@ -9,8 +9,8 @@
     padding: 0;
   }
   
-  body {
-    font-family: 'PT Sans', Arial, Verdana;
+  body {     
+    font-family: 'Titillium Web', sans-serif;
     background-color: #fff;
   }
   
@@ -20,7 +20,26 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #2c3e50;
+    text-shadow: 0 1px 0 #b3cff3;
+    
   }
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #2c3e50;
+    background-color: #e74c3c;
+  }
+  h4{
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color:#fff;
+    background-color: #2cd1e7;
+  }
+  
   
   .menu {
     list-style: none;
@@ -35,7 +54,6 @@
   }
     li {
       float: left;
-      width: 25%;
       height: 100%;
       margin: 0;
       padding: 0;
@@ -71,7 +89,6 @@
     transition: left .4s, background-color .4s;
   }
 
- 
   .menu li:nth-child(2):hover,
   .menu li:nth-child(2):focus,
   .menu li:nth-child(2):active 
@@ -101,6 +118,8 @@
 
 #background, #anext-generation{
   background-image: url('images/Computer-Information-Systems.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 1580px auto;
 }
@@ -122,17 +141,13 @@
   left: 0px;
   z-index: 99;
   background-position: center -50px;
-  -webkit-filter: blur(10px);
-  filter: url('https://jordanhollinger.com/media/blur.svg');
-  filter: blur(10px);
 }
 
 #introducing {
     position: relative;
     z-index: 100;
     padding: 15px;
-    background: rgb(29, 27, 27);
-    background: rgba(45, 42, 42, 0.66);
+    background: rgba(130, 227, 240, 0.3);
 }
 
 @media (max-width: 600px ) {
@@ -140,17 +155,115 @@
   #anext-generation { background-position: center -10px; }
 }
 
-#introducing h2, #introducing h5, #introducing h5 a {
+#introducing h2, #introducing h3, #introducing h3 a {
     text-align: center;
     color: #fff;
     font-weight: normal;
     text-shadow: 0 1px 0 #353232;
+    margin-top: 30px; 
+    font-size: 25px;
+
 }
 
-#introducing h2 {
-    margin-bottom: 50px;
+
+
+
+
+li {
+    font-size: 22px;
+}
+
+.container1, .container2, .container3, .container4, .container5 {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 5px;
+    width: 65%;
+    height:auto;
+    margin-left: 20%;
+    margin-right:25%;
+}
+
+.container1 {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container2 p {
+    font-size: 20px;
+    text-align:center;
+}
+ 
+.container3 {
+    display:flex;
+    flex-direction:row;
+} */
+
+.container3 p {
     font-size: 25px;
+    color: white;
 }
-#introducing h5 { margin-top: 70px; font-size: 14px;
+
+footer {
+    text-align:center;
+    color: white;
+    background-color: #040904;
+    display:flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 20px;
+    
 }
-  
+
+footer img {
+    margin-left: 5px;
+    filter:grayscale(100%)
+}
+
+table, th, td {
+    border: 1px solid ivory;
+    border-collapse: collapse;
+  }
+
+th, td {
+    padding:5px;
+}
+
+th {
+    background-color:ivory;
+    color: #040904;
+    font-size:20px;
+}
+
+td {
+    color: ivory;
+    font-size:18px;
+    text-align:center;
+    width: 300px;
+    font-weight: -500;
+}
+
+.td1 {
+    font-size: 30px;
+    width:100px;
+}
+
+tr:hover {
+    background-color: green;
+}
+
+.container5 h5 {
+    font-size:25px;
+    text-align:center;
+}
+
+.container5 li {
+    background-color:rgb(194, 245, 117);
+    font-weight:900;
+}
+
+.container5 img {
+    margin-left: 180px;
+    margin-right:180px;
+}
+
