@@ -16,7 +16,7 @@
   
   h1 {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #2c3e50;
@@ -141,7 +141,7 @@
   padding: 50px 90px 120px 50px;
 }
 
-#introducing, #introducing2, #background3 {
+#introducing, #introducing2, #introducing3 {
     position: relative;
     z-index: 100;
     padding: 15px;
