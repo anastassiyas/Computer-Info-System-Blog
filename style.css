@@ -25,12 +25,16 @@
   }
   h2 {
     text-align: center;
-    font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #2c3e50;
+    color: #fff;
+    text-shadow: 0 1px 0 #353232;
     background-color: #e74c3c;
     border-radius: 12px;
+    font-weight: normal;
+    
+    margin-top: 30px; 
+    font-size: 25px;
   }
   h4{
     text-align: center;
@@ -156,15 +160,8 @@
  
 }
 
-#introducing h2, #introducing h3, #introducing h3 a {
-    text-align: center;
-    color: #fff;
-    font-weight: normal;
-    text-shadow: 0 1px 0 #353232;
-    margin-top: 30px; 
-    font-size: 25px;
 
-}
+
 .container, .container2 {
     display:flex;
     flex-direction: column;
