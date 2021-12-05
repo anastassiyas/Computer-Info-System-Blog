@@ -118,6 +118,13 @@
       left: 75%;
       background-color: #2cd1e7;
     }
+  .menu li:nth-child(5):hover,
+  .menu li:nth-child(5):focus,
+  .menu li:nth-child(5):active 
+     ~ .slider {
+      left: 75%;
+      background-color: #2cd1e7;
+    }
 
 
 #background, #backround2 {
@@ -190,7 +197,7 @@ footer img {
 }
 
  img, iframe {
-    margin-left:150px;
+    margin-left:220px;
     margin-right:170px;
 }
 .microwave {
