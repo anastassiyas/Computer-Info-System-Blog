@@ -198,14 +198,11 @@ footer img {
  width: 50%; 
  float: left;  
 }
-.laptop-image-1  {
+.laptop-image-1, .laptop2-image-2   {
 width: 50%; 
 float: left;    
 }
-.laptop2-image-2 {
-width: 50%; 
-float: left;    
-}
+
 
 
 
