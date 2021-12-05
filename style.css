@@ -193,7 +193,10 @@ footer img {
     margin-left:150px;
     margin-right:170px;
 }
-
+.microwave {
+    float: right;
+    margin: 7px 0 7px 7px; 
+   }
 
 
 
