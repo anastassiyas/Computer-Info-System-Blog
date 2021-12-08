@@ -150,7 +150,6 @@
 
 @media (max-width: 600px ) {
   #background, #background2, #background3 { padding: 10px; }
- 
 }
 
 .container, .container2, .container3 {
@@ -183,25 +182,42 @@ footer img {
     filter:grayscale(100%)
 }
 
- img, iframe {
+  img, iframe {
     margin-left:220px;
     margin-right:170px;
-}
+} */
 .microwave {
     float: right;
     margin: 7px 0 7px 7px; 
 }
-.laptop {
-    width: 100%;
-}
+
+
 .laptop-text-1, .laptop-text-2 {
  width: 50%; 
  float: left;  
 }
-.laptop-image-1, .laptop2-image-2   {
+
+#laptop-image-1 , #laptop-image-2 {
 width: 50%; 
 float: left;    
+
 }
+
+.laptop-image-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.img-one {
+    margin: 40px;
+}
+.img-two {
+    margin: 40px;
+}
+
+
 
 
 
