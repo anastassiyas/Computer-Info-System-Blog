@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+    <title>OSI Model</title>
+</head>
+
+<body>
+    <ul class="menu">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Contacts</a></li>
+        <li class="slider"></li>
+    </ul>
+    <header>
+        <h1>What is the OSI Model?</h1>
+    </header>
+    <section>
+        <div id="background">
+            <div id="background2">
+                <div id="introducing" style="border-radius: 12px;">
+
+
+                    <!--Post 1-->
+                    <div class="container" style="border-radius: 12px;">
+                        <h2>7 layers explained in detail</h2>
+                        <div class="flex1">
+                            <img src="images/OSI.jpg" alt="input" width="360" height="240">
+                            <p>
+                            <h3>The OSI models specifies how information is transmitted from a
+                                network device like a router to its destination through a physical
+                                medium and how it interacts with the application. In other words,
+                                it provides a standard for different systems to communicate with each other.</h3>
+                            <h4><strong><i>Layer 1:</i><br>Physical Layer:</strong></h4>
+
+                            <ol>At the lowest layer of the OSI reference model, the physical layer is responsible
+                                for transmitting unstructured data bits across the network between the physical layers
+                                of the sending and receiving devices. In other words,
+                                it takes care of the transmission of raw bit streams.</ol>
+                            <ol> The physical layer may include physical resources like cables, modems, network adapters, and hubs, etc.</ol>
+                            
+
+                        </div>
+                        <h4><strong><i>Layer 2:</i><br>Data Link Layer</strong></h4>
+
+                    <ol>The data link layer corrects any errors that may have occurred at the physical layer. 
+                        It ensures that any data transfer is error-free between nodes over the physical layer.
+                        It is responsible for reliable transmission of data frames between connected nodes.
+                        The data is packaged into frames here and transferred node-to-node. The data layer has the following sub-layers</ol>
+                    <ol><strong>Media Access Control (MAC):</strong> The MAC address layer is responsible for flow control and multiplexing devices transmissions over the network.</ol>
+                    <ol><strong>link control (LLC):</strong> The LLC layer provides error control and flow control over the physical medium and identifies line protocols.</ol>
+                    <br>
+                    <img src="images/input.png" alt="input" width="360" height="240">
+                    <br>
+
+
+                    <div class="flex2">
+                        <h4><strong><i>Layer 3:</i><br>Network Layer</strong></h4>
+
+                        <ol>The network layer receives frames from the data link layer and delivers them to the intended destination
+                            based on the addresses inside the frame. It also handles packet routing. The network layer locates destinations
+                            using logical addresses like the IP. Routers are a crucial component at this layer as they route information to where it needs to go between different networks.
+
+                            The main functions of the Network layer are:</ol>
+                        <ol><strong>Routing:</strong>strong The network layer protocols determine which routes from source to destination.</ol>
+                        <ol><strong>Logical Addressing:</strong></ol>
+                        <br>
+                        <img src="images/storage.jpg" alt="storage" width="360" height="240">
+
+                    </div>
+                    <h4><strong><i>Layer 4:</i><br>Transport Layer</strong></h4>
+
+                        <ol>The transport layer is responsible for <strong>delivering, error checking, flow control, and sequencing data packets.</strong>
+                            It regulates the sequencing, size, and transfer of data between systems and hosts. It gets the data from the session
+                            layer and breaks it into transportable segments.</ol>
+                        <ol>Two examples of the Transport Layer are <i> UDP (User Datagram Protocol)</i> and <i>(Transmission Control Protocol)</i>
+                             that is build on top of the Internet Protocol (IP model), which work at layer 3.
+
+                        </ol>
+                        
+                        <br>
+                        <img src="images/storage.jpg" alt="storage" width="360" height="240">
+
+                    <div class="flex3">
+                        <h4><strong><i>Layer 5:</i><br>Session Layer</strong></h4>
+
+                        <ol>The session layer will create communication channels, called <strong>sessions</strong>,
+                            between different devices. This layer is responsible for opening those sessions and 
+                            ensuring that they’re functional during data transfer.</ol>
+                        <ol>In other words, the session layer is responsible for establishing, managing, and terminating
+                            communication sessions with the lower layers with the presentation and application layer.
+                            It is also responsible for authentication and reconnections, and it can set checkpoints during a data transfer—if.
+                        </ol>
+                    </div>
+                    <h4><strong><i>Layer 6:</i><br>Presentation Layer</strong></h4>
+
+                        <ol>The presentation layer is responsible for ensuring that the data is <strong>understandable for the end system</strong> 
+                            or useful for later stages. It translates or formats data based on the application’s syntax or semantics.
+                            It also manages any encryption or decryption required by the application layer. It is also called the syntax layer.</ol>
+                          
+                        <br>
+                        <img src="images/cpu.jfif" alt="storage" width="360" height="240">
+                        </ul>
+                   
+
+                    <div class="flex4">
+                        <h4><strong><i>Layer 7:</i><br>Application Layer                      
+                            </strong></h4>
+
+                        <ol>The application layer is where the user directly interacts with a software application, 
+                            so it is <strong>closest to the end user</strong>. When the user wants to transmit files or pictures,
+                            this layer interacts with the application communicating with the network. The application layer identifies resources,
+                             communication partners, and synchronizes communication.</ol>
+
+                        <ol>Other functions of the application layer are the Network Virtual Terminal and FTAM-File transfer access, 
+                            and mail/directory services. The protocol used depends on the information the user wants to send. 
+                            Some common protocols include:</ol>
+
+                        <ol>POP3 or SMTP for emails</ol>
+                        <ol>FTP for emails</ol>
+                        <ol>Telnet for controlling remote devices</ol>
+                        <ol><i>Examples of communications that use Layer 7 are web browsers (Chrome, Firefox, Safari).
+
+                        </i></ol>
+
+                        <br>
+                        <img src="images/alu.png" alt="storage" width="360" height="240">
+
+                    </div>
+                    <div class="flex5">
+                        <h4><strong><i>Control Unit:</i></strong></h4>
+                        <ol>
+                            The control unit directs and controls the activities of the internal and external
+                            devices. It interprets the instructions
+                            fetched into the computer, determines what data, if any, are needed, where it is stored,
+                            where to store the results of the operation,
+                            and sends the control signals to the devices involved in the execution of the
+                            instructions.
+                            <br>
+                            <img src="images/control.jpg" alt="input" width="360" height="240">
+                        </ol>
+                        <h4><strong>Microwave with 5 functional parts</strong></h4>
+
+                        <p><img src="images/microwave.jfif" alt="microwave" class="microwave" width="300"
+                                height="365">
+                        <ol><strong>Input</strong> The input of a microwave is what is the user programs or puts
+                            inside the microwave.</ol>
+
+                        <ol><strong>Output</strong> The Output of the microwave is the sound that the is made to
+                            alert the user that the process is complete.</ol>
+
+                        <ol><strong>Memory</strong> A microwave oven according to the invention have one-chip
+                            microprocessors including a ROM, a RAM and an I/O port.
+                            In the ROM a permanent program for controlling the RAM, a data input unit and a display
+                            unit is stored.</ol>
+
+                        <ol><strong>Processor</strong> A microprocessor, a scaled-down, single-circuit computer
+                            chip, regulates the functions of the oven.</ol>
+
+                        <ol><strong>Control Unit</strong> A microwave controller is a feedback temperature
+                            controller for controlling product temperatures during microwave, heating by cycling the
+                            magnetron on and off. </ol>
+                        </p>
+                        <br>
+                        <iframe width="400" height="315"
+                            src="https://watch.screencastify.com/v/jwsGuWS8NdA0f5dxPz26" frameborder="5"
+                            allowfullscreen></iframe>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>                        
