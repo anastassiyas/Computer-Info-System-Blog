@@ -32,10 +32,18 @@
     background-color: #e74c3c;
     border-radius: 12px;
     font-weight: normal;
-    
     margin-top: 30px; 
     font-size: 25px;
   }
+  h3 {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color:#fff;
+    border-radius: 12px;
+  }
+
   h4{
     text-align: center;
     font-size: 16px;
@@ -169,7 +177,7 @@
 footer {
     text-align:center;
     color: white;
-    background-color: #040904;
+    background-color: rgba(130, 227, 240, 0.5);
     display:flex;
     justify-content: center;
     text-decoration: none;
@@ -181,7 +189,12 @@ footer img {
     margin-left: 5px;
     filter:grayscale(100%)
 }
-
+.col-sm-12 {
+position: relative;
+    min-height: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
   img, iframe {
     margin-left:220px;
     margin-right:170px;
