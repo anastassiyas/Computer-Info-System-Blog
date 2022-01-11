@@ -1,20 +1,17 @@
 # Computer-Info-System-Blog
 https://anastassiyas.github.io/Computer-Info-System-Blog/
-A countdown timer counting down till christmas second by second:
+
 
 
 ![image](https://raw.githubusercontent.com/anastassiyas/Computer-Info-System-Blog/main/images/blog%20(2).png)
 
 **Overview:**
 
-The main purpose of this site is to create countdown timer counting down till christmas second by second:
+This blog is  about the IT world. It shares a vast amount of information on different Information Technology topics which include mobile, software, security, Internet and much more.It provides knowledge about the latest Internet threats, hacking and also shares information on different aspects of data security.
 
 **Goal:**
 
-The timer counts online the number of days, hours, minutes and seconds until the Сhristmas.
-
-You can change the countdown for any important event for you by setting the desired date and time or by choosing from the presets.
-
+Information Technology is the current big thing and businesses are embracing it on a vast scale. People from all walks of life are intrigued by the way IT is progressing at an overwhelming rate and transforming the digital world. If you are someone who is keen to learn about the newest technologies, digital industry, and the web in general, then keep reading.
 
 **Technologies to be used:**
 
