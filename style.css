@@ -239,10 +239,10 @@ position: relative;
   img, iframe {
     margin-left:200px;
     margin-right:170px;
-} */
-.microwave {
+} 
+img.microwave {
     float: right;
-    margin: 7px 0 7px 7px; 
+    margin: 7px 0 70px 7px; 
 }
 
 
