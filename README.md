@@ -3,7 +3,7 @@ https://anastassiyas.github.io/Computer-Info-System-Blog/
 A countdown timer counting down till christmas second by second:
 
 
-![image](https://user-images.githubusercontent.com/89368113/143669686-6344db5b-157d-42f9-a61c-a42ae1d91599.png)
+![image](https://raw.githubusercontent.com/anastassiyas/Computer-Info-System-Blog/main/images/blog%20(2).png)
 
 **Overview:**
 
