@@ -1,89 +1,203 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Мини-тест</title>
-    <style>
-        form {
-            display: none;
+const startButton = document.getElementById('start-btn')
+
+const nextButton = document.getElementById('next-btn')
+
+const questionContainerElement = document.getElementById('question-container')
+
+const questionElement = document.getElementById('question')
+
+const answerButtonsElement = document.getElementById('answer-buttons')
+
+let shuffledQuestions, currentQuestionIndex
+
+startButton.addEventListener('click', startGame)
+
+nextButton.addEventListener('click', () => {
+
+    currentQuestionIndex++
+
+    setNextQuestion()
+
+})
+
+function startGame() {
+
+    startButton.classList.add('hide')
+
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+
+    currentQuestionIndex = 0
+
+    questionContainerElement.classList.remove('hide')
+
+    setNextQuestion()
+
+}
+
+function setNextQuestion() {
+
+    resetState()
+
+    showQuestion(shuffledQuestions[currentQuestionIndex])
+
+}
+
+function showQuestion(question) {
+
+    questionElement.innerText = question.question
+
+    question.answers.forEach(answer => {
+
+        const button = document.createElement('button')
+
+        button.innerText = answer.text
+
+        button.classList.add('btn')
+
+        if (answer.correct) {
+
+            button.dataset.correct = answer.correct
+
         }
-    </style>
-</head>
-<body>
-<form action="#" id="questionForm">
-    <div>Время на этот вопрос: <span id="downcount"></span></div>
-    <p id="question"></p>
-    <input id="YesBtn" type="button" value="Да">
-    <input id="NoBtn" type="button" value="Нет">
-</form>
-<script>
-    var questionsArray=[
-        ['Вопрос 1', 'Да'],
-        ['Вопрос 2', 'Да'],
-        ['Вопрос 3', 'Да'],
-        ['Вопрос 4', 'Да'],
-        ['Вопрос 5', 'Нет']
-    ]; //Вопросы и правильные ответы в виде 'Да' или 'Нет'
-    var userName=prompt('Введите ваше имя');
-    alert('Тест состоит из 5 вопросов, на каждый дается 15 секунд. Нажмите ОК, чтобы начать тест');
-    var startTime,                       //время начала теста
-        time,                            //оставшееся время на вопрос
-        timer,  
-        frm=document.getElementById('questionForm'), //форма вопроса
-        questionNumber,                  //номер текущего вопроса
-        answerArray=[];                  //массив введенных пользователем ответов
-    
-    function showResults() {
-        var rightAnswers=0,                 //количество правильных ответов
-            endTime= new Date,              //время окончания теста
-            totalTime=endTime-startTime;    //время, затраченное на прохождение теста (в миллисекундах)
-        for(var i=0; i<5; i++) {
-            if (answerArray[i]==questionsArray[i][1]) rightAnswers++;
-        }
-        var mark= rightAnswers<3 ? 2 : rightAnswers; //оценка
-        alert(userName+', вы сдали тест на '+mark+' за время '+
-            Math.floor(totalTime/1000/60)+'мин. '+Math.round(totalTime/1000%60)+'сек.');
+
+        button.addEventListener('click', selectAnswer)
+
+        answerButtonsElement.appendChild(button)
+
+    })
+
+}
+
+function resetState() {
+
+    clearStatusClass(document.body)
+
+    nextButton.classList.add('hide')
+
+    while (answerButtonsElement.firstChild) {
+
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+
     }
-    function closeQuestion(answer) {    
-        frm.style.display='none';
-        clearInterval(timer);
-        answerArray[questionNumber]=answer;
-        if(questionNumber==4) {
-            showResults();
-        } else {
-            questionNumber++;
-            showQuestion(questionNumber);
-        }
+
+}
+
+function selectAnswer(e) {
+
+    const selectedButton = e.target
+
+    const correct = selectedButton.dataset.correct
+
+    setStatusClass(document.body, correct)
+
+    Array.from(answerButtonsElement.children).forEach(button => {
+
+        setStatusClass(button, button.dataset.correct)
+
+    })
+
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+
+        nextButton.classList.remove('hide')
+
+    } else {
+
+        startButton.innerText = 'Restart'
+
+        startButton.classList.remove('hide')
+
     }
-    function setTime() {
-        var downcountElement=document.getElementById('downcount'); //
-        downcountElement.innerHTML=time;
-        if(time<=0) {
-            closeQuestion('Время вышло');
-            return;
-        };
-        time--;
+
+}
+
+function setStatusClass(element, correct) {
+
+    clearStatusClass(element)
+
+    if (correct) {
+
+        element.classList.add('correct')
+
+    } else {
+
+        element.classList.add('wrong')
+
     }
-    function showQuestion(questionNumber) {
-        var question=document.getElementById('question');
-        question.innerHTML=questionsArray[questionNumber][0];
-        time=15;
-        setTime();
-        timer=setInterval(setTime, 1000);
-        frm.style.display='block';
+
+}
+
+function clearStatusClass(element) {
+
+    element.classList.remove('correct')
+
+    element.classList.remove('wrong')
+
+}
+
+const questions = [
+
+    {
+
+        question: 'What is 2 + 2?',
+
+        answers: [
+
+            { text: '4', correct: true },
+
+            { text: '22', correct: false }
+
+        ]
+
+    },
+
+    {
+
+        question: 'Who is the best YouTuber?',
+
+        answers: [
+
+            { text: 'Web Dev Simplified', correct: true },
+
+            { text: 'Traversy Media', correct: true },
+
+            { text: 'Dev Ed', correct: true },
+
+            { text: 'Fun Fun Function', correct: true }
+
+        ]
+
+    },
+
+    {
+
+        question: 'Is web development fun?',
+
+        answers: [
+
+            { text: 'Kinda', correct: false },
+
+            { text: 'YES!!!', correct: true },
+
+            { text: 'Um no', correct: false },
+
+            { text: 'IDK', correct: false }
+
+        ]
+
+    },
+
+    {
+
+        question: 'What is 4 * 2?',
+
+        answers: [
+
+            { text: '6', correct: false },
+
+            { text: '8', correct: true }
+
+        ]
+
     }
-    
-    document.getElementById('YesBtn').onclick=function() {
-        closeQuestion('Да');
-    };
-    document.getElementById('NoBtn').onclick=function() {
-        closeQuestion('Нет');
-    };
-    
-    startTime= new Date;
-    questionNumber=0;
-    showQuestion(questionNumber);
-</script>
- 
-</body>
-</html>
+
+]
